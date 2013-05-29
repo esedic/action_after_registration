@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="user">
+	<name>Action after registration</name>
+	<author>Elvis Sedić</author>
+	<creationDate>May 2013</creationDate>
+	<copyright>Copyright (C) 2013 Spletodrom</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>esedic@gmail.com</authorEmail>
+	<version>1.0.0</version>
+	<description>A plugin which triggers actionafter registration.</description>
+	<files>
+		<filename plugin="action_after_registration">action_after_registration.php</filename>
+		<filename>index.html</filename>
+	</files>
+
+	<config />
+</extension>
