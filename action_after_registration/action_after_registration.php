@@ -23,13 +23,12 @@ class plgUserActionAfterRegistration extends JPlugin
 			if ($isnew) {
 				// do something
 				$doc = JFactory::getDocument();
-				$script1 = 'document.write(unescape("%3Cscript id=%27pap_x2s6df8d%27 src=%27" + (("https:" == document.location.protocol) ? "https://" : "http://") + "partnerji.afforma.si/scripts/trackjs.js%27 type=%27text/javascript%27%3E%3C/script%3E")); ';
-				$script2 = 'PostAffTracker.setAccountId(\'5990ce3d\')'
+				$doc->addCustomTag('<script id=\'pap_x2s6df8d\' src=\'" + (("https:" == document.location.protocol) ? "https://" : "http://") + "partnerji.afforma.si/scripts/trackjs.js\' type=\'text/javascript\'></script>');
+				$script = 'PostAffTracker.setAccountId(\'5990ce3d\')'
         					. 'var sale = PostAffTracker.createAction(\'CMRegistracija\');';
-				$doc->addScriptDeclaration($script1);
-				$doc->addScriptDeclaration($script2);
+				$doc->addScriptDeclaration($script);
 			}
-			
+
 			else {
 				// do nothing
 			}
